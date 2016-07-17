@@ -1,6 +1,6 @@
 library(dplyr)
 data<-read.table("household_power_consumption.txt",sep=";",skip = 66637, nrows = 2880)
-str(data)
+
 par(mfrow=c(2,2),mar=c(4,4,4,4))
 Time<-strptime(paste(data$V1,data$V2,sep=""),"%d/%m/%Y %H:%M:%S")
 plot(Time, data$V3, type="l", xlab="", ylab="Global Active Power (kilowatts)")

@@ -2,7 +2,7 @@ library(dplyr)
 data<-read.table("household_power_consumption.txt",sep=";",skip = 66637, nrows = 2880)
 str(data)
 Time<-strptime(paste(data$V1,data$V2,sep=""),"%d/%m/%Y %H:%M:%S")
-head(Time)
+
 plot(Time,data$V7,type="l", ylab="Energy Submetering", xlab="")
 lines(Time,data$V8,type="l",col="red")
 lines(Time,data$V9,type="l",col="blue")
